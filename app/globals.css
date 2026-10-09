@@ -1,26 +1,416 @@
-@import "tailwindcss";
-
+/* ==========================================================================
+   1. CSS VARIABLES (Brand Palette & Tokens)
+   ========================================================================== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-color: #0a0a0a;            /* Dark background */
+  --bg-card: #111111;             /* Dark card background */
+  --bg-card-border: #222222;      /* Border for capabilities/cards */
+  --text-light-blue: #d9f0ff;     /* Light blueish grey for headlines */
+  --text-color: #ffffff;          /* Pure white text */
+  --text-muted: #888888;          /* Muted body/labels */
+  --text-link: #ffffff;
+  --highlight: #f60;              /* Brand Vibrant Orange */
+  --accent-color: var(--highlight);
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ==========================================================================
+   2. GLOBAL RESET & BASE STYLES
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  padding-top: 100px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+a {
+  color: var(--text-link);
+  text-decoration: none;
+}
+
+h1, h2, h3, .logo, .cta-btn, nav a {
+  font-family: var(--font-main);
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(3rem, 7.5vw, 5.5rem);
+  line-height: 0.92;
+  font-weight: 900;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  color: var(--text-light-blue);
+}
+
+h1 span {
+  color: var(--highlight);
+}
+
+/* ==========================================================================
+   3. HEADER & NAVIGATION
+   ========================================================================== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo a {
+  font-family: var(--font-main);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-family: var(--font-main);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--highlight);
+}
+
+/* ==========================================================================
+   4. GLOBAL BADGES & HERO SECTIONS
+   ========================================================================== */
+.badge {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+.manifesto-hero, .comm-hero {
+  padding: 80px 0 60px;
+}
+
+.manifesto-text {
+  font-size: 1.2rem;
+  color: #cccccc;
+  max-width: 780px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero-subhead {
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+
+.hero-intro-text p {
+  font-size: 1.15rem;
+  color: #cccccc;
+  max-width: 860px;
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.hero-action {
+  margin-top: 35px;
+}
+
+.hero-action .cta-btn {
+  display: inline-block;
+  width: auto;
+  padding: 18px 36px;
+}
+
+/* Statement Box */
+.comm-statement {
+  padding: 80px 0;
+  background: var(--bg-card);
+  border-top: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.statement-card h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: var(--text-light-blue);
+  margin-bottom: 20px;
+}
+
+.statement-card p {
+  font-size: 1.15rem;
+  color: #cccccc;
+  line-height: 1.75;
+  max-width: 860px;
+}
+
+.market-scope {
+  margin-top: 35px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+}
+
+/* Capabilities Grid */
+.comm-capabilities {
+  padding: 100px 0;
+}
+
+.comm-capabilities .section-title {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: var(--text-light-blue);
+  margin-bottom: 50px;
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cap-item {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-card-border);
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cap-number {
+  font-family: var(--font-main);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.cap-item h3 {
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.cap-item p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* About Karina Section */
+.comm-about {
+  padding: 100px 0;
+  background: var(--bg-color);
+}
+
+.about-wrapper {
+  max-width: 860px;
+}
+
+.about-wrapper h2 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  color: var(--text-light-blue);
+  margin-bottom: 30px;
+}
+
+.about-text p {
+  font-size: 1.15rem;
+  color: #cccccc;
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.about-quote {
+  margin-top: 40px;
+  margin-left: 20px;
+  padding-left: 28px;
+  border-left: 3px solid var(--highlight);
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   5. UNIFIED CONTACT / CTA SECTION (USED ON ALL PAGES)
+   ========================================================================== */
+.cta-contact-section, .comm-contact, .contact-section {
+  padding: 100px 0 120px;
+  background-color: var(--bg-color);
+}
+
+.form-container {
+  max-width: 720px;
+}
+
+.form-container h2, .contact-section h2 {
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  line-height: 0.92;
+  font-weight: 900;
+  letter-spacing: -2px;
+  color: var(--text-light-blue);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.form-subtitle {
+  color: #a1a1a1;
+  font-size: 1.1rem;
+  margin-bottom: 48px;
+  line-height: 1.5;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 720px;
+}
+
+.form-group-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+input, textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #333333;
+  padding: 12px 0;
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-family: var(--font-body);
+  transition: border-color 0.25s ease;
+  width: 100%;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #444444;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+  border-bottom-color: var(--highlight);
+  outline: none;
+}
+
+/* Shared Full-Width CTA Submit Button */
+.cta-btn, .submit-btn {
+  display: block;
+  width: 100%;
+  background-color: var(--highlight);
+  color: #ffffff;
+  border: none;
+  padding: 22px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.cta-btn:hover, .submit-btn:hover {
+  background-color: #e65c00;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   6. FOOTER & RESPONSIVE
+   ========================================================================== */
+footer {
+  padding: 40px 0;
+  border-top: 1px solid #1c1c1c;
+  color: #555555;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+  .form-group-row {
+    grid-template-columns: 1fr;
+  }
+  .about-quote {
+    margin-left: 0;
+  }
 }
