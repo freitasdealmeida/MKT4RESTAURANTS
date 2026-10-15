@@ -2,7 +2,7 @@ export default function StrategicCommunicationPage() {
   return (
     <article className="strategic-comm-page">
       {/* Hero Section */}
-      <section className="comm-hero">
+      <section className="services-hero">
         <div className="container">
           <span className="badge">Bespoke Strategy & Storytelling</span>
           <h1 className="reveal-text">Elevate your business’ communication</h1>
@@ -24,7 +24,7 @@ export default function StrategicCommunicationPage() {
       </section>
 
       {/* Emotional Connection & Scope */}
-      <section className="comm-statement">
+      <section className="Services-statement">
         <div className="container">
           <div className="statement-card">
             <h2>Connect Beyond the Plate</h2>
@@ -32,14 +32,14 @@ export default function StrategicCommunicationPage() {
               As the market becomes more competitive, it’s not enough to serve delicious meals. The most successful brands are those that connect with people on an emotional level — through story, culture, and purpose. We help you create or grow your brand presence, achieving media awareness and consistent buzz.
             </p>
             <p className="market-scope">
-              <strong>Based in Lisbon &bull; Available Worldwide</strong>
+              <strong>Available Worldwide</strong>
             </p>
           </div>
         </div>
       </section>
 
       {/* Capabilities Grid */}
-      <section className="comm-capabilities">
+      <section className="Services-capabilities">
         <div className="container">
           <h2 className="section-title">We can help you with:</h2>
 
@@ -84,7 +84,7 @@ export default function StrategicCommunicationPage() {
       </section>
 
       {/* About Section */}
-      <section className="comm-about">
+      <section className="Services-about">
         <div className="container">
           <div className="about-wrapper">
             <span className="badge">Leadership & Background</span>
@@ -106,7 +106,7 @@ export default function StrategicCommunicationPage() {
       </section>
 
       {/* Dedicated Contact Form */}
-      <section id="contact-service" className="comm-contact">
+      <section id="contact-service" className="Services-contact">
         <div className="container">
           <div className="form-container">
             <span className="badge">Inquire Now</span>

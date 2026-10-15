@@ -25,6 +25,11 @@ export default function ServicesPage() {
                 Strategic Communication
               </Link>
             </li>
+            <li>
+              <Link href="/services/photography-for-restaurants">
+                Photography for Restaurants
+              </Link>
+            </li>
           </ul>
         </div>
       </section>

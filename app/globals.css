@@ -131,7 +131,7 @@ header {
   margin-bottom: 20px;
 }
 
-.manifesto-hero, .comm-hero {
+.manifesto-hero, .services-hero {
   padding: 80px 0 60px;
 }
 
@@ -169,7 +169,7 @@ header {
 }
 
 /* Statement Box */
-.comm-statement {
+.Services-statement {
   padding: 80px 0;
   background: var(--bg-card);
   border-top: 1px solid #1a1a1a;
@@ -201,11 +201,11 @@ header {
 }
 
 /* Capabilities Grid */
-.comm-capabilities {
+.Services-capabilities {
   padding: 100px 0;
 }
 
-.comm-capabilities .section-title {
+.Services-capabilities .section-title {
   font-size: clamp(2.2rem, 5vw, 3.2rem);
   font-weight: 900;
   letter-spacing: -1px;
@@ -250,7 +250,7 @@ header {
 }
 
 /* About Karina Section */
-.comm-about {
+.Services-about {
   padding: 100px 0;
   background: var(--bg-color);
 }
@@ -289,7 +289,7 @@ header {
 /* ==========================================================================
    5. UNIFIED CONTACT / CTA SECTION (USED ON ALL PAGES)
    ========================================================================== */
-.cta-contact-section, .comm-contact, .contact-section {
+.cta-contact-section, .Services-contact, .contact-section {
   padding: 100px 0 120px;
   background-color: var(--bg-color);
 }
