@@ -81,8 +81,7 @@ export default function PhotographyForRestaurantsPage() {
 
             <div className="about-text">
               <p>
-                Eduardo has more than 10 years of experience in specialized photography, technical lighting, and visual storytelling. Over the years, he has focused his expertise on the food, architecture, and hospitality sectors, capturing dozens of unique restaurant spaces and culinary concepts across Europe. Having shot in so many venues—from energetic local bistros to fine dining establishments—he knows exactly how to capture the atmosphere and detail that make a space magnetic.
-
+                Eduardo has more than 15 years of experience in photography, technical lighting, and visual storytelling. Over the years, he has focused his expertise on the food, architecture, and hospitality sectors, capturing dozens of unique restaurant spaces and culinary concepts across Europe. Having shot in so many venues—from energetic local bistros to fine dining establishments—he knows exactly how to capture the atmosphere and detail that make a space magnetic.
               </p>
               <p>
                 His strength lies in storytelling through words and images, and the combination of the two. This allows him to help you tell your brand’s story, stand out from the crowd, and achieve the goals and dreams you have for your business.

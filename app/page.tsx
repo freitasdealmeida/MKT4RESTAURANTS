@@ -7,7 +7,7 @@ export default function HomePage() {
             <span>Want to drive more clients to your restaurant?</span> <br /> We can help!
           </h1>
           <p className="manifesto-text">
-            In an era of digital noise, your restaurant deserves to be the signal. We believe photography should taste like the first bite, and consulting should feel like a direct ROI.
+           Great food builds a reputation, but strategic marketing builds a thriving business. In a crowded dining landscape, we bridge the gap between culinary excellence and commercial success. By combining targeted messaging with high-impact visual storytelling, we turn digital attention into full tables.
           </p>
         </div>
       </section>

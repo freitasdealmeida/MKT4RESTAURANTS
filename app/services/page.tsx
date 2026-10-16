@@ -16,21 +16,28 @@ export default function ServicesPage() {
       </section>
 
       {/* Products / Services Section */}
-      <section id="products" className="products">
+      <section id="products" className="products services-navigation-section">
         <div className="container">
-          <h2>How we can help</h2>
-          <ul>
-            <li>
-              <Link href="/services/strategic-communication">
-                Strategic Communication
-              </Link>
-            </li>
-            <li>
-              <Link href="/services/photography-for-restaurants">
-                Photography for Restaurants
-              </Link>
-            </li>
-          </ul>
+          <span className="badge">HOW WE CAN HELP</span>
+          <h2>Services</h2>
+
+          <div className="service-links-grid">
+            <Link href="/services/strategic-communication" className="service-card">
+              <div className="service-card-header">
+                <span className="service-number">01</span>
+              </div>
+              <h3>Strategic Communication</h3>
+              <p>PR, brand positioning, and story-driven messaging built to elevate prestige.</p>
+            </Link>
+
+            <Link href="/services/photography-for-restaurants" className="service-card">
+              <div className="service-card-header">
+                <span className="service-number">02</span>
+              </div>
+              <h3>Photography for Restaurants</h3>
+              <p>High-impact visual storytelling engineered to drive curiosity and fill tables.</p>
+            </Link>
+          </div>
         </div>
       </section>
     </article>
