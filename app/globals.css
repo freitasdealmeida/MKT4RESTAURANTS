@@ -377,6 +377,11 @@ header {
   gap: 24px;
 }
 
+.capabilities-grid.service-steps,
+.service-steps {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .cap-item {
   background: var(--bg-card);
   border: 1px solid var(--bg-card-border);
@@ -556,7 +561,9 @@ footer {
 }
 
 @media (max-width: 900px) {
-  .capabilities-grid {
+  .capabilities-grid,
+  .capabilities-grid.service-steps,
+  .service-steps {
     grid-template-columns: 1fr;
   }
 }

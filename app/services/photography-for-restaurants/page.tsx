@@ -43,7 +43,7 @@ export default function PhotographyForRestaurantsPage() {
         <div className="container">
           <h2 className="section-title">STRATEGIC PRODUCTION FOR 3 MONTHS</h2>
 
-          <div className="capabilities-grid">
+          <div className="capabilities-grid service-steps">
             <div className="cap-item">
               <span className="cap-number">01</span>
               <h3>RESEARCH & ANALYSIS</h3>
@@ -87,7 +87,7 @@ export default function PhotographyForRestaurantsPage() {
                 His strength lies in storytelling through words and images, and the combination of the two. This allows him to help you tell your brand’s story, stand out from the crowd, and achieve the goals and dreams you have for your business.
               </p>
               <blockquote className="about-quote">
-                “Great photography doesn't just display food—it respects your restaurant's identity and translates the entire dining experience into imagery that stops scrollers, sparks desire, and fills your tables,” he says.
+                “Great photography doesn&apos;t just display food—it respects your restaurant&apos;s identity and translates the entire dining experience into imagery that stops scrollers, sparks desire, and fills your tables,” he says.
               </blockquote>
             </div>
           </div>
@@ -99,7 +99,7 @@ export default function PhotographyForRestaurantsPage() {
         <div className="container">
           <div className="form-container">
             <span className="badge">Inquire Now</span>
-            <h2>READY TO TRANSFORM YOUR RESTAURANT'S VISUAL PRESENCE?</h2>
+            <h2>READY TO TRANSFORM YOUR RESTAURANT&apos;S VISUAL PRESENCE?</h2>
             <p className="form-subtitle">Tell us about your restaurant, your goals, and where you want to take your brand.</p>
 
             <form className="contact-form">
