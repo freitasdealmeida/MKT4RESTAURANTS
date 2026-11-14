@@ -3,6 +3,9 @@ export default function HomePage() {
     <article className="home-page">
       <section className="manifesto-hero">
         <div className="container">
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '24px', padding: '6px 14px', borderRadius: '9999px', backgroundColor: 'rgba(255, 102, 0, 0.12)', border: '1px solid rgba(255, 102, 0, 0.35)', color: 'var(--highlight)', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+            <span>⚡</span> Teste via Antigravity
+          </div>
           <h1 className="reveal-text">
             <span>Want to drive more clients to your restaurant?</span> <br /> We can help!
           </h1>
