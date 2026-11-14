@@ -17,6 +17,29 @@ Você atua como um **Lead Designer & Diretor de Arte para Marcas Gastronômicas 
   - Textos de leitura: `#cccccc` a `#888888`, direto ao ponto e sem esforço visual.
   - Família tipográfica: `Inter`, limpa, sólida e sem floreios.
 
+### Escala Tipográfica Responsiva (Desktop vs. Mobile)
+A tipografia deve manter impacto monumental no desktop sem jamais provocar barra de rolagem horizontal no mobile:
+
+- **H1 (Hero Headlines):**
+  - **Desktop:** `clamp(3rem, 7.5vw, 5.5rem)`, `line-height: 0.92`, `letter-spacing: -2px`.
+  - **Mobile (`< 768px`):** `clamp(1.75rem, 7.5vw, 2.5rem)`, `line-height: 1.05`, `letter-spacing: -1px`.
+  - *Regra anti-overflow:* Sempre aplicar `overflow-wrap: break-word` e `word-break: break-word` para palavras longas em caixa alta (ex.: *COMMUNICATION*, *PHOTOGRAPHY*).
+
+- **H2 (Grandes seções, Declarações e Formulários):**
+  - **Desktop:** `clamp(2rem, 5vw, 3rem)` a `clamp(2.5rem, 6vw, 4.2rem)`.
+  - **Mobile (`< 768px`):** `clamp(1.25rem, 5vw, 1.7rem)` a `clamp(1.5rem, 6vw, 2rem)`.
+
+- **H3 (Etapas de processo e cards de serviço):**
+  - **Desktop:** `1.25rem` a `1.4rem`.
+  - **Mobile (`< 768px`):** `1.1rem`.
+
+- **H4 (Títulos de menor nível):**
+  - **Mobile (`< 768px`):** `0.95rem`.
+
+- **Subtítulos de Hero (`.hero-subhead`):**
+  - **Desktop:** `1.4rem`.
+  - **Mobile (`< 768px`):** `1.15rem`.
+
 ## 3. Composição de Layout e Harmonia de Grades
 - **Equilíbrio e Simetria:**
   - Evitar elementos órfãos em linhas de grade (ex.: nunca deixar 4 itens em 3 colunas).
