@@ -72,28 +72,6 @@ export default function PhotographyForRestaurantsPage() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="Services-about">
-        <div className="container">
-          <div className="about-wrapper">
-            <span className="badge">Leadership & Background</span>
-            <h2>About Eduardo</h2>
-
-            <div className="about-text">
-              <p>
-                Eduardo has more than 15 years of experience in photography, technical lighting, and visual storytelling. Over the years, he has focused his expertise on the food, architecture, and hospitality sectors, capturing dozens of unique restaurant spaces and culinary concepts across Europe. Having shot in so many venues—from energetic local bistros to fine dining establishments—he knows exactly how to capture the atmosphere and detail that make a space magnetic.
-              </p>
-              <p>
-                His strength lies in storytelling through words and images, and the combination of the two. This allows him to help you tell your brand’s story, stand out from the crowd, and achieve the goals and dreams you have for your business.
-              </p>
-              <blockquote className="about-quote">
-                “Great photography doesn&apos;t just display food—it respects your restaurant&apos;s identity and translates the entire dining experience into imagery that stops scrollers, sparks desire, and fills your tables,” he says.
-              </blockquote>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Dedicated Contact Form */}
       <section id="contact-service" className="services-contact">
         <div className="container">
